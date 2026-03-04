@@ -1,0 +1,21 @@
+Package: ggflagsbr
+Title: Brazilian State Flags for ggplot2
+Version: 0.0.1
+Authors@R: 
+    person("Steven", "Ross", email = "steven.ross@uniriotec.br", role = c("aut", "cre"))
+Description: Provides geoms for adding Brazilian state flags to ggplot2 visualizations.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    ggplot2,
+    ggimage,
+    rlang
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
