@@ -23,7 +23,8 @@ library(ggflagsbr)
 
 ```{r}
 # Install from local development version
-devtools::install("path/to/ggflagsbr")
+devtools::install_github("DATAUNIRIO/ggflagsbr")
+
 # Or load during development
 devtools::load_all()
 
