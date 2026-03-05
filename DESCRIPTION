@@ -1,6 +1,6 @@
 Package: ggflagsbr
 Title: Brazilian State Flags for ggplot2
-Version: 0.0.1
+Version: 0.1.1
 Authors@R: 
     person("Steven", "Ross", email = "steven.ross@uniriotec.br", role = c("aut", "cre"))
 Description: Provides geoms for adding Brazilian state flags to ggplot2 visualizations.

@@ -16,17 +16,25 @@ df <- data.frame(
 )
 
 df$image <- get_flag_uf(df$uf)
+df$image2 <- get_flag_circle_uf(df$uf)
 
 #--------------------------------------------------------------
 ggplot(df, aes(x = uf, y = value)) +
   geom_col(fill = "grey80") +
   geom_flag_uf(aes(image = image), size = 0.08) +
+  #geom_flag_uf(aes(image = image2), size = 0.08) +
   theme_minimal()
   
 #--------------------------------------------------------------
 ggplot(df, aes(x = uf, y = value)) +
   geom_col(fill = "grey80") +
   geom_flag_uf(aes(image = image), size = 0.1, y = 1) +
+  theme_minimal()
+
+#--------------------------------------------------------------
+ggplot(df, aes(x = uf, y = value)) +
+  geom_col(fill = "grey80") +
+  geom_flag_uf(aes(image = image2), size = 0.08) +
   theme_minimal()
   
 ```
