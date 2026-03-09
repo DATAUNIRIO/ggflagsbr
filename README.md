@@ -1,7 +1,6 @@
 # ggflagsbr: Plot flags of the Brazilian States in ggplot2
 
-A Brazilian State Flag geom for ggplot2. 
-
+A Brazilian State Flag geom for ggplot2.
 
 ```{r}
 
@@ -25,7 +24,11 @@ ggplot(df, aes(x = uf, y = value)) +
   geom_flag_uf(aes(image = image), size = 0.08) +
   #geom_flag_uf(aes(image = image2), size = 0.08) +
   theme_minimal()
-  
+```
+
+![](https://raw.githubusercontent.com/DATAUNIRIO/ggflagsbr/ecb09875440f0bcaed450d848b37f271723d2bcc/img/bar.png)
+
+```         
 #--------------------------------------------------------------
 ggplot(df, aes(x = uf, y = value)) +
   geom_col(fill = "grey80") +
@@ -37,7 +40,11 @@ ggplot(df, aes(x = uf, y = value)) +
   geom_col(fill = "grey80") +
   geom_flag_uf(aes(image = image2), size = 0.08) +
   theme_minimal()
+```
 
+![](https://raw.githubusercontent.com/DATAUNIRIO/ggflagsbr/ecb09875440f0bcaed450d848b37f271723d2bcc/img/bar2.png)
+
+```         
 #--------------------------------------------------------------
 library(ggplot2)
 library(ggflagsbr)
@@ -58,8 +65,4 @@ ggplot(d, aes(x = x, y = y, country = country, size = x)) +
   scale_size(range = c(0, 15))  
 ```
 
-![]('img/scatter.png')
-
-
-
-
+![](https://raw.githubusercontent.com/DATAUNIRIO/ggflagsbr/ecb09875440f0bcaed450d848b37f271723d2bcc/img/scatter.png)
