@@ -37,6 +37,29 @@ ggplot(df, aes(x = uf, y = value)) +
   geom_col(fill = "grey80") +
   geom_flag_uf(aes(image = image2), size = 0.08) +
   theme_minimal()
-  
+
+#--------------------------------------------------------------
+library(ggplot2)
+library(ggflagsbr)
+
+set.seed(1234)
+d <- data.frame(
+  x = rnorm(50), y = rnorm(50),
+  country = sample(c("RS","PE","RJ", "SP", "MG", "BA"), 50, TRUE),
+  stringsAsFactors = FALSE
+)
+
+#d$image <- get_flag_uf(d$country)
+d$image <- get_flag_circle_uf(d$country)
+
+
+ggplot(d, aes(x = x, y = y, country = country, size = x)) +
+    geom_flag_uf(aes(image = image), size = 0.08) +
+  scale_size(range = c(0, 15))  
 ```
+
+![]('img/scatter.png')
+
+
+
 
