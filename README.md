@@ -16,13 +16,11 @@ df <- data.frame(
 )
 
 df$image <- get_flag_uf(df$uf)
-df$image2 <- get_flag_circle_uf(df$uf)
 
 #--------------------------------------------------------------
 ggplot(df, aes(x = uf, y = value)) +
   geom_col(fill = "grey80") +
   geom_flag_uf(aes(image = image), size = 0.08) +
-  #geom_flag_uf(aes(image = image2), size = 0.08) +
   theme_minimal()
 ```
 
@@ -31,15 +29,12 @@ ggplot(df, aes(x = uf, y = value)) +
 ```         
 #--------------------------------------------------------------
 ggplot(df, aes(x = uf, y = value)) +
-  geom_col(fill = "grey80") +
+  geom_col(fill = "navy") +
   geom_flag_uf(aes(image = image), size = 0.1, y = 1) +
   theme_minimal()
 
 #--------------------------------------------------------------
-ggplot(df, aes(x = uf, y = value)) +
-  geom_col(fill = "grey80") +
-  geom_flag_uf(aes(image = image2), size = 0.08) +
-  theme_minimal()
+
 ```
 
 ![](https://raw.githubusercontent.com/DATAUNIRIO/ggflagsbr/ecb09875440f0bcaed450d848b37f271723d2bcc/img/bar2.png)
@@ -56,13 +51,13 @@ d <- data.frame(
   stringsAsFactors = FALSE
 )
 
-#d$image <- get_flag_uf(d$country)
 d$image <- get_flag_circle_uf(d$country)
 
 
 ggplot(d, aes(x = x, y = y, country = country, size = x)) +
     geom_flag_uf(aes(image = image), size = 0.08) +
-  scale_size(range = c(0, 15))  
+  scale_size(range = c(0, 15))  +
+  theme_minimal()
 ```
 
 ![](https://raw.githubusercontent.com/DATAUNIRIO/ggflagsbr/ecb09875440f0bcaed450d848b37f271723d2bcc/img/scatter.png)
