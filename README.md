@@ -4,6 +4,7 @@ A Brazilian State Flag geom for ggplot2.
 
 ```{r}
 
+# remotes::install_github("DATAUNIRIO/ggflagsbr")
 # devtools::install_github("DATAUNIRIO/ggflagsbr")
 
 library(ggplot2)
